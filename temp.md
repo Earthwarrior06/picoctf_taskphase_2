@@ -48,3 +48,9 @@ earthwarrior@LAPTOP-VLDN28C5:~$ nc saturn.picoctf.net 50585
 Tell me a story and then I'll tell you one >> flag.txt
 Here's a story -
 flag.txt
+
+
+
+
+
+https://ctf101.org/binary-exploitation/what-is-a-format-string-vulnerability/
