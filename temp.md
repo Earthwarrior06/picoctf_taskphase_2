@@ -122,3 +122,5 @@ ocip{FTCk43L_gn1g4lFff0_4tS_9_kc06f5}716û­ ©m13m
 `ocip {FTC k43L _gn1 g4lF ff0_ 4tS_ 9_kc 06f5 }716`
 rearrages to picoCTF{L34king_Fl4g_0ff_St4ck_95f60617}
 which doesnt seem to work for god knows why
+nvm it was because the flag shouldve been `picoCTF{L34k1ng_Fl4g_0ff_St4ck_95f60617}`
+leaking was 1ng not ing
